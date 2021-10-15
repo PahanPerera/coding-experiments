@@ -1,0 +1,50 @@
+.container {
+  margin: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container header {
+  text-align: center;
+}
+
+.container header h1 {
+  border-bottom: 1px solid black;
+}
+
+.container header p {
+  font-size: 12px;
+}
+
+.container footer {
+  text-align: center;
+}
+
+.container footer button {
+  padding: 0.5rem 2rem;
+  background-color: black;
+  color: white;
+  border: none;
+  font-size: 16px;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+
+.playground {
+  margin: 2rem 0;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.playground section {
+  height: 11rem;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  border-bottom: 4px solid black;
+  margin: 0 1rem;
+}

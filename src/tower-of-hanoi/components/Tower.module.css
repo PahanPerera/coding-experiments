@@ -1,0 +1,15 @@
+.tower {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+}
+.tower span {
+  padding: 0.2rem 0.6rem;
+  margin: -0.02rem 0;
+  letter-spacing: 0.2rem;
+  border: 2px solid black;
+  border-bottom: 0;
+  border-radius: 1rem;
+}
