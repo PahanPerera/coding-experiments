@@ -9,9 +9,7 @@ function TowerOfHanoi() {
   let [step, setStep] = useState([[], [], []]);
   let [moves, setMoves] = useState(0);
   let [appState, setAppState] = useState("NOT_STARTED");
-  const [loop, setLoop] = useState(null);
-
-  let handler = null;
+  let [loop, setLoop] = useState(null);
 
   useEffect(() => {
     setStep(prepareHanoi(TOWER_HEIGHT));
@@ -27,13 +25,14 @@ function TowerOfHanoi() {
     let steps = solveHanoi(TOWER_HEIGHT);
     let index = 0;
     let loopHandler = setInterval(() => {
+      if (index === steps.length) {
+        clearInterval(loopHandler);
+        setAppState("FINISHED");
+        return;
+      }
       setStep(steps[index]);
       index++;
       setMoves(++moves);
-      if (index === steps.length) {
-        clearInterval(handler);
-        setAppState("FINISHED");
-      }
     }, 700);
     setLoop(loopHandler);
   };
