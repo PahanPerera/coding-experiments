@@ -1,6 +1,8 @@
-import TowerOfHanoi from "./tower-of-hanoi/Main";
+import { lazy, Suspense } from "react";
 import Home from "./home/Main";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+
+const TowerOfHanoi = lazy(() => import("./tower-of-hanoi/Main"));
 
 function App() {
   return (
@@ -8,7 +10,9 @@ function App() {
       <main>
         <Switch>
           <Route path="/tower-of-hanoi">
-            <TowerOfHanoi />
+            <Suspense fallback={<div>Loading...</div>}>
+              <TowerOfHanoi />
+            </Suspense>
           </Route>
           <Route path="/">
             <Home />

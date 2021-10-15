@@ -13,7 +13,7 @@ function useGameSteps(height) {
     return () => {
       if (loop) clearInterval(loop);
     };
-  }, [loop]);
+  }, [loop, height]);
 
   let start = function () {
     if (isStarted) return;
