@@ -10,6 +10,9 @@ function Home() {
           <li>
             <Link to="/tower-of-hanoi">Tower Of Hanoi</Link>
           </li>
+          <li>
+            <Link to="/my-toast">My Toast</Link>
+          </li>
         </ul>
       </nav>
     </main>

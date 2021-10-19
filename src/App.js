@@ -1,6 +1,7 @@
 import { lazy, Suspense } from "react";
 import Home from "./home/Main";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import MyToastPage from "./my-toast/Main";
 
 const TowerOfHanoi = lazy(() => import("./tower-of-hanoi/Main"));
 
@@ -13,6 +14,9 @@ function App() {
             <Suspense fallback={<div>Loading...</div>}>
               <TowerOfHanoi />
             </Suspense>
+          </Route>
+          <Route path="/my-toast">
+            <MyToastPage />
           </Route>
           <Route path="/">
             <Home />
