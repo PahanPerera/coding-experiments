@@ -14,7 +14,17 @@ function PageContent() {
       <button onClick={() => showToast("Hello! This is my Toast")}>
         SHOW ME MY TOAST
       </button>
-      <p>TODO : Need to build to auto disappearing logic</p>
+      <p>FEATURES</p>
+      <ul>
+        <li>Max limit for Toasts - (3)</li>
+        <li>Automatic disappearing (after 3 secs)</li>
+      </ul>
+      <p>TODO</p>
+      <ul>
+        <li>Improve automatic disappearing logic</li>
+        <li>Appear and exit animations</li>
+        <li>Different types of Toast (success, error, warning)</li>
+      </ul>
     </main>
   );
 }
