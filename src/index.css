@@ -3,6 +3,7 @@ body {
   font-family: "Space Mono", monospace;
 }
 
-button {
+button,
+input {
   font-family: "Space Mono", monospace;
 }

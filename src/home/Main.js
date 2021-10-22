@@ -13,6 +13,9 @@ function Home() {
           <li>
             <Link to="/my-toast">My Toast</Link>
           </li>
+          <li>
+            <Link to="/todo-app-redux">Todo App - Redux</Link>
+          </li>
         </ul>
       </nav>
     </main>

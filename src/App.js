@@ -2,6 +2,7 @@ import { lazy, Suspense } from "react";
 import Home from "./home/Main";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import MyToastPage from "./my-toast/Main";
+import TodoAppRedux from "./todo-app-redux/Main";
 
 const TowerOfHanoi = lazy(() => import("./tower-of-hanoi/Main"));
 
@@ -17,6 +18,9 @@ function App() {
           </Route>
           <Route path="/my-toast">
             <MyToastPage />
+          </Route>
+          <Route path="/todo-app-redux">
+            <TodoAppRedux />
           </Route>
           <Route path="/">
             <Home />
