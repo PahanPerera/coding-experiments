@@ -1,11 +1,14 @@
 .form {
   display: flex;
+  flex-wrap: wrap;
+  width: 100%;
 }
 
 .form input {
   border: 1px solid black;
   padding: 10px;
   font-size: 16px;
+  flex: 3;
 }
 
 .form input:focus {
@@ -19,4 +22,5 @@
   padding: 0px 20px;
   border: 1px solid black;
   cursor: pointer;
+  flex: 1;
 }

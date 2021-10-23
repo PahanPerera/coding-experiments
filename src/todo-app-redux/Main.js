@@ -8,7 +8,7 @@ function TodoAppRedux() {
   return (
     <Provider store={store}>
       <main className={styles.container}>
-        <h2>Todo App - Redux</h2>
+        <h1>Todo App - Redux</h1>
         <AddTodo />
         <TodoList />
       </main>
