@@ -8,6 +8,7 @@ function AddTodo() {
   const dispatch = useDispatch();
 
   const handleAddTodo = () => {
+    if (text === "") return;
     dispatch(addTodo(text));
     setText("");
   };

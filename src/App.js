@@ -9,7 +9,7 @@ const TowerOfHanoi = lazy(() => import("./tower-of-hanoi/Main"));
 function App() {
   return (
     <Router>
-      <main>
+      <main className={"main"}>
         <Switch>
           <Route path="/tower-of-hanoi">
             <Suspense fallback={<div>Loading...</div>}>

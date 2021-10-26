@@ -8,6 +8,8 @@ input {
   font-family: "Space Mono", monospace;
 }
 
-.completed {
-  text-decoration: line-through;
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

@@ -1,12 +1,23 @@
 .container {
-  margin: 0 1rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  text-align: center;
-  font-size: 12px;
+}
+
+.container .content {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.container .btnContainer {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .container button {
@@ -19,18 +30,17 @@
 }
 
 .container button:hover {
-  border: none;
+  border-color: white;
 }
 .container p {
   display: flex;
   padding: 0;
   margin: 0;
   padding-top: 16px;
-  text-align: left;
   text-decoration: underline;
 }
 .container ul {
   margin: 0;
-  padding: 0 20px;
   text-align: left;
+  width: 100%;
 }
