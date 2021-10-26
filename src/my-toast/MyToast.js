@@ -1,4 +1,5 @@
 import styles from "./MyToast.module.css";
+import { TransitionGroup, CSSTransition } from "react-transition-group";
 import { createContext, useContext, useEffect, useState } from "react";
 
 export const MyToastContext = createContext({
@@ -63,11 +64,15 @@ export function MyToastContainer() {
 
   return (
     <div className={styles.container}>
-      {toasts
-        .filter((toast) => toast.status === 1)
-        .map((toast) => (
-          <MyToast key={toast.id} message={toast.message + " - " + toast.id} />
-        ))}
+      <TransitionGroup>
+        {toasts
+          .filter((toast) => toast.status === 1)
+          .map((toast) => (
+            <CSSTransition key={toast.id} timeout={300} classNames="item">
+              <MyToast message={toast.message + " - " + toast.id} />
+            </CSSTransition>
+          ))}
+      </TransitionGroup>
     </div>
   );
 }

@@ -16,11 +16,11 @@ function PageContent() {
         <ul>
           <li>Max limit for Toasts - (3)</li>
           <li>Automatic disappearing (after 3 secs)</li>
+          <li>Improve automatic disappearing logic</li>
+          <li>Appear and exit animations</li>
         </ul>
         <p>TODO</p>
         <ul>
-          <li>Improve automatic disappearing logic</li>
-          <li>Appear and exit animations</li>
           <li>Different types of Toast (success, error, warning)</li>
         </ul>
       </div>
