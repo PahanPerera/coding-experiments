@@ -1,0 +1,30 @@
+.grid {
+  display: flex;
+  border: 1px solid black;
+}
+
+.row {
+}
+
+.cellContainer {
+  position: relative;
+  width: 5rem;
+  height: 5rem;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+}
+
+.cover {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  width: 4rem;
+  height: 4rem;
+  background-color: black;
+}
+
+.cell {
+}

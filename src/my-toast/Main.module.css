@@ -22,14 +22,14 @@
 .container button {
   background-color: black;
   color: white;
-  border: 2px solid black;
+  border: 2px solid white;
   padding: 6px 10px;
   cursor: pointer;
   font-size: 14px;
 }
 
 .container button:hover {
-  border-color: white;
+  border-color: black;
 }
 .container p {
   display: flex;

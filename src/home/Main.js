@@ -16,6 +16,9 @@ function Home() {
           <li>
             <Link to="/todo-app-redux">Todo App - Redux</Link>
           </li>
+          <li>
+            <Link to="/memory-game">Memory Game</Link>
+          </li>
         </ul>
       </nav>
     </main>
