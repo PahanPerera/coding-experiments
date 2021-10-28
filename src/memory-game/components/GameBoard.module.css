@@ -1,5 +1,6 @@
 .grid {
   display: flex;
+  border: 1px solid black;
 }
 
 .row {
@@ -14,7 +15,6 @@
   justify-content: center;
   align-items: center;
   font-size: 2rem;
-  border-radius: 1rem;
 }
 
 .cover {
@@ -22,7 +22,7 @@
   top: 0.5rem;
   left: 0.5rem;
   width: 3rem;
-  border-radius: 50%;
+  border-radius: 1rem;
   background-color: black;
   transition: 0.1s all ease-in-out;
 }
