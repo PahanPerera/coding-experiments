@@ -4,9 +4,12 @@ import styles from "./GameBoard.module.css";
 function Board({ VALUES }) {
   const [openCells, setOpenCells] = useState([]);
   const [pendingMatch, setPendingMatch] = useState(false);
+  const [lockBoard, setLockBoard] = useState(false);
   let [count, setCount] = useState(0);
 
   const handleCellOpen = (index) => {
+    if (lockBoard) return;
+    setLockBoard(true);
     setOpenCells([...openCells, index]);
     setCount(++count);
     if (pendingMatch) {
@@ -18,9 +21,11 @@ function Board({ VALUES }) {
           setOpenCells([...openCells]);
         }
         setPendingMatch(false);
+        setLockBoard(false);
       }, 500);
     } else {
       setPendingMatch(true);
+      setLockBoard(false);
     }
   };
 
@@ -80,7 +85,11 @@ function Cell({ id, value, closed = true, onOpen }) {
         if (closed === true) onOpen(id);
       }}
     >
-      {closed ? <div className={styles.cover}></div> : ""}
+      <div
+        className={
+          styles.cover + " " + (closed ? styles.coverClosed : styles.coverOpen)
+        }
+      ></div>
       <div className={styles.cell}>{value}</div>
     </div>
   );

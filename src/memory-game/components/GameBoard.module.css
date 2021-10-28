@@ -1,6 +1,5 @@
 .grid {
   display: flex;
-  border: 1px solid black;
 }
 
 .row {
@@ -8,23 +7,30 @@
 
 .cellContainer {
   position: relative;
-  width: 5rem;
-  height: 5rem;
+  width: 4rem;
+  height: 4rem;
   border: 1px solid black;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 2rem;
+  border-radius: 1rem;
 }
 
 .cover {
   position: absolute;
   top: 0.5rem;
   left: 0.5rem;
-  width: 4rem;
-  height: 4rem;
+  width: 3rem;
+  border-radius: 50%;
   background-color: black;
+  transition: 0.1s all ease-in-out;
 }
 
-.cell {
+.coverClosed {
+  height: 3rem;
+}
+
+.coverOpen {
+  height: 0rem;
 }
