@@ -19,6 +19,14 @@ function Home() {
           <li>
             <Link to="/memory-game">Memory Game</Link>
           </li>
+          <li>
+            <a
+              href="https://tictactoe-multiplayer-game.herokuapp.com/"
+              target="_blank"
+            >
+              Tic Tac Toe - Multiplayer
+            </a>
+          </li>
         </ul>
       </nav>
     </main>
