@@ -23,6 +23,7 @@ function Home() {
             <a
               href="https://tictactoe-multiplayer-game.herokuapp.com/"
               target="_blank"
+              rel="noreferrer"
             >
               Tic Tac Toe - Multiplayer
             </a>
