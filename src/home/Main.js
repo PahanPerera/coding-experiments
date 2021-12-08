@@ -28,6 +28,15 @@ function Home() {
               Tic Tac Toe - Multiplayer
             </a>
           </li>
+          <li>
+            <a
+              href="https://github.com/PahanPerera/angular-light-dark-app"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Angular Light / Dark Mode
+            </a>
+          </li>
         </ul>
       </nav>
     </main>
