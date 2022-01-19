@@ -37,6 +37,9 @@ function Home() {
               Angular Light / Dark Mode
             </a>
           </li>
+          <li>
+            <Link to="/cache-viz">Cache Viz</Link>
+          </li>
         </ul>
       </nav>
     </main>

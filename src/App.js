@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import MyToastPage from "./my-toast/Main";
 import TodoAppRedux from "./todo-app-redux/Main";
 import MemoryGame from "./memory-game/Main";
+import CacheViz from "./cache-viz/Main";
 
 const TowerOfHanoi = lazy(() => import("./tower-of-hanoi/Main"));
 
@@ -25,6 +26,9 @@ function App() {
           </Route>
           <Route path="/memory-game">
             <MemoryGame />
+          </Route>
+          <Route path="/cache-viz">
+            <CacheViz />
           </Route>
           <Route path="/">
             <Home />
