@@ -5,9 +5,8 @@ import SwFactory from "../shared/Sw";
 
 export default function NetworkOnly() {
   let [pageValue, setPageValue] = useState();
-  let [cacheValue, setCacheValue] = useState();
   let [networkValue, setNetworkValue] = useState(1);
-  const sw = SwFactory({ cacheValue, networkValue });
+  const sw = SwFactory({ cacheValue: null, networkValue });
 
   const fetchContent = async () => {
     let result = await sw.fetchContentFromNetwork();
@@ -28,7 +27,7 @@ export default function NetworkOnly() {
       <Connection />
       <Box type={"SW"} />
       <Connection />
-      <Box type={"Cache"} value={cacheValue} />
+      <Box type={"Cache"} value={null} />
       <Connection />
       <Box
         type={"Network"}
