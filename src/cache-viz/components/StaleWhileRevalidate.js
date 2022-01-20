@@ -17,7 +17,9 @@ export default function StaleWhileRevalidate() {
     let result;
     try {
       result = await sw.fetchContentFromCache();
-    } catch (error) {}
+    } catch (error) {
+      result = "err";
+    }
     try {
       const newValue = await sw.fetchContentFromNetwork(isNetworkReachable);
       console.log(newValue);

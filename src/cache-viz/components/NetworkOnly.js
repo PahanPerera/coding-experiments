@@ -6,10 +6,17 @@ import SwFactory from "../shared/Sw";
 export default function NetworkOnly() {
   let [pageValue, setPageValue] = useState();
   let [networkValue, setNetworkValue] = useState(1);
+  let [isNetworkReachable, setIsNetworkReachable] = useState(true);
   const sw = SwFactory({ cacheValue: null, networkValue });
 
   const fetchContent = async () => {
-    let result = await sw.fetchContentFromNetwork();
+    let result;
+    try {
+      result = await sw.fetchContentFromNetwork(isNetworkReachable);
+    } catch (error) {
+      result = "err";
+    }
+
     setPageValue(result);
   };
 
@@ -28,7 +35,13 @@ export default function NetworkOnly() {
       <Box type={"SW"} />
       <Connection />
       <Box type={"Cache"} value={null} />
-      <Connection />
+      <Connection
+        isConnected={isNetworkReachable}
+        buttonText={"Toggle Connection"}
+        buttonAction={() => {
+          setIsNetworkReachable(!isNetworkReachable);
+        }}
+      />
       <Box
         type={"Network"}
         value={networkValue}

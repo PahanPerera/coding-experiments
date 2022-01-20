@@ -8,6 +8,7 @@ export default function CacheFirst() {
   let [pageValue, setPageValue] = useState();
   let [cacheValue, setCacheValue] = useState();
   let [networkValue, setNetworkValue] = useState(1);
+  let [isNetworkReachable, setIsNetworkReachable] = useState(true);
   const sw = SwFactory({ cacheValue, networkValue });
   const cache = CacheFactory({ setCacheValue });
 
@@ -16,9 +17,13 @@ export default function CacheFirst() {
     try {
       result = await sw.fetchContentFromCache();
     } catch (error) {
-      const newValue = await sw.fetchContentFromNetwork();
-      await cache.setValue(newValue);
-      result = newValue;
+      try {
+        const newValue = await sw.fetchContentFromNetwork(isNetworkReachable);
+        await cache.setValue(newValue);
+        result = newValue;
+      } catch (error) {
+        result = "err";
+      }
     }
     setPageValue(result);
   };
@@ -45,7 +50,13 @@ export default function CacheFirst() {
           setCacheValue(null);
         }}
       />
-      <Connection />
+      <Connection
+        isConnected={isNetworkReachable}
+        buttonText={"Toggle Connection"}
+        buttonAction={() => {
+          setIsNetworkReachable(!isNetworkReachable);
+        }}
+      />
       <Box
         type={"Network"}
         value={networkValue}

@@ -101,3 +101,7 @@
 .red {
   border-bottom: 3px dashed red;
 }
+
+.err {
+  color: red;
+}

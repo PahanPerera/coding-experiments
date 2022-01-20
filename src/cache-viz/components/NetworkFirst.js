@@ -18,7 +18,11 @@ export default function NetworkFirst() {
       result = await sw.fetchContentFromNetwork(isNetworkReachable);
       await cache.setCacheValue(result);
     } catch (error) {
-      result = await sw.fetchContentFromCache();
+      try {
+        result = await sw.fetchContentFromCache();
+      } catch (error) {
+        result = "err";
+      }
     }
     setPageValue(result);
   };

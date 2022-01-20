@@ -7,10 +7,17 @@ export default function CacheOnly() {
   let [pageValue, setPageValue] = useState();
   let [cacheValue, setCacheValue] = useState();
   let [networkValue, setNetworkValue] = useState(1);
+  let [isNetworkReachable, setIsNetworkReachable] = useState(true);
   const sw = SwFactory({ cacheValue, networkValue });
 
   const fetchContent = async () => {
-    let result = await sw.fetchContentFromCache();
+    let result;
+    try {
+      result = await sw.fetchContentFromCache();
+    } catch (error) {
+      result = "err";
+    }
+
     setPageValue(result);
   };
 
@@ -36,7 +43,13 @@ export default function CacheOnly() {
           setCacheValue(networkValue);
         }}
       />
-      <Connection />
+      <Connection
+        isConnected={isNetworkReachable}
+        buttonText={"Toggle Connection"}
+        buttonAction={() => {
+          setIsNetworkReachable(!isNetworkReachable);
+        }}
+      />
       <Box
         type={"Network"}
         value={networkValue}
