@@ -24,6 +24,16 @@ function PageContent() {
           <li>Different types of Toast (success, error, warning)</li>
         </ul>
       </div>
+      <div>
+        Source Code -
+        <a
+          href="https://github.com/PahanPerera/coding-experiments/tree/main/src/my-toast"
+          target={"_blank"}
+          rel="noreferrer"
+        >
+          https://github.com/PahanPerera/coding-experiments/tree/main/src/my-toast
+        </a>
+      </div>
       <div className={styles.btnContainer}>
         <button onClick={() => showToast("Hello! This is my Toast")}>
           SHOW ME MY TOAST

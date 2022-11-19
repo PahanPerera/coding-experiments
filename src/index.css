@@ -28,3 +28,7 @@ input {
   opacity: 0;
   transition: opacity 300ms ease-in;
 }
+
+a {
+  color: #02b2e7;
+}
