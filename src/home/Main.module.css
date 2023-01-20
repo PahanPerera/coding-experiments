@@ -23,6 +23,7 @@
   grid-auto-flow: row;
   width: calc(100% - 4rem);
   gap: 2rem;
+  margin-bottom: 2rem;
 }
 
 .card {

@@ -7,6 +7,7 @@ import lightdark from "./images/lightdark.webp";
 import todo from "./images/todo.png";
 import toast from "./images/toast.webp";
 import cache from "./images/cache.png";
+import infinityScroll from "./images/infinity_scroll.png";
 
 function Card({ name, img = project, tags = [], url }) {
   const navigate = () => {
@@ -90,6 +91,12 @@ function Home() {
           tags={["Tutorial", "Redux", "ReactJS"]}
           img={todo}
           url={"https://coding-experiments.vercel.app/my-toast"}
+        />
+        <Card
+          name={"Infinity Scroll"}
+          tags={["Tutorial", "ReactJS"]}
+          img={infinityScroll}
+          url={"https://coding-experiments.vercel.app/infinity-scroll"}
         />
       </section>
     </main>
