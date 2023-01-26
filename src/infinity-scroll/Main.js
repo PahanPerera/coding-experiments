@@ -41,7 +41,7 @@ const useInfinityScroll = () => {
       setInitialSize(s);
       containerRef.current.addEventListener("scroll", (e) => {
         if (
-          containerRef.current.scrollTop + containerRef.current.offsetHeight ===
+          containerRef.current.scrollTop + containerRef.current.offsetHeight >=
           containerRef.current.scrollHeight
         ) {
           setHasReachedEnd(true);
