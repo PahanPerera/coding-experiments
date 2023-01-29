@@ -6,6 +6,7 @@ import TodoAppRedux from "./todo-app-redux/Main";
 import MemoryGame from "./memory-game/Main";
 import CacheViz from "./cache-viz/Main";
 import InfinityScroll from "./infinity-scroll/Main";
+import ImageCarousel from "./image-carousel/Main";
 
 const TowerOfHanoi = lazy(() => import("./tower-of-hanoi/Main"));
 
@@ -33,6 +34,9 @@ function App() {
           </Route>
           <Route path="/infinity-scroll">
             <InfinityScroll />
+          </Route>
+          <Route path="/image-carousel">
+            <ImageCarousel />
           </Route>
           <Route path="/">
             <Home />

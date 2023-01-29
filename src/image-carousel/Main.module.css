@@ -1,0 +1,49 @@
+.container {
+  margin: 4%;
+  width: 100%;
+  text-align: center;
+}
+
+.slidesContainer {
+}
+.slidesContainer {
+  position: relative;
+}
+
+.slides {
+  height: 300px;
+  border: 20px solid lightskyblue;
+  background-color: lightskyblue;
+  position: relative;
+  overflow: hidden;
+}
+.slides img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  position: absolute;
+  inset: 0;
+}
+
+.actionButtons button {
+  background: transparent;
+  border: none;
+  position: absolute;
+  top: 40%;
+  z-index: 1;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.leftBtn {
+  left: 0;
+}
+
+.rightBtn {
+  right: 0;
+}
+
+.footer {
+  margin: 16px 0;
+  letter-spacing: 10px;
+}

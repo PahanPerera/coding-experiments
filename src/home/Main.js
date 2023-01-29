@@ -8,6 +8,7 @@ import todo from "./images/todo.png";
 import toast from "./images/toast.webp";
 import cache from "./images/cache.png";
 import infinityScroll from "./images/infinity_scroll.png";
+import carousel from "./images/carousel.png";
 
 function Card({ name, img = project, tags = [], url }) {
   const navigate = () => {
@@ -97,6 +98,12 @@ function Home() {
           tags={["Tutorial", "ReactJS"]}
           img={infinityScroll}
           url={"https://coding-experiments.vercel.app/infinity-scroll"}
+        />
+        <Card
+          name={"Image Carousel"}
+          tags={["Tutorial", "ReactJS"]}
+          img={carousel}
+          url={"https://coding-experiments.vercel.app/image-carousel"}
         />
       </section>
     </main>
